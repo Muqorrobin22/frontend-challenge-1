@@ -55,6 +55,10 @@ body * + * {
   padding: 2.5em;
 }
 
+.tile:hover .description {
+  color: white;
+}
+
 .tile-orange {
   background-color: var(--color-bright-orange);
 }
@@ -80,6 +84,7 @@ body * + * {
   color: var(--color-transparent-white);
   line-height: 25px;
   margin-top: -1em;
+  transition: all 0.2s ease;
 }
 
 .button {
