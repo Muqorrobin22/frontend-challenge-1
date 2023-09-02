@@ -8,6 +8,9 @@
 
   --color-transparent-white: hsla(0, 0%, 100%, 0.75);
   --color-very-light-gray: hsl(0, 0%, 95%);
+
+  --font-lexend-deca: "Lexend Deca";
+  --font-big-shoulders-display: "Big Shoulders Display";
 }
 
 *,
@@ -16,6 +19,100 @@
   box-sizing: inherit;
 }
 
+body {
+  font-family: var(--font-lexend-deca);
+  background-color: var(--color-very-light-gray);
+  font-size: 1rem;
+  color: var(--color-very-light-gray);
+}
+
 body * + * {
   margin-top: 1em;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  max-width: 920px;
+  height: 96vh;
+  margin: auto;
+}
+
+.container .tile-wrapper {
+  display: flex;
+
+  border-radius: 0.5em;
+  overflow: hidden;
+}
+
+.tile {
+  margin-top: 0;
+  min-height: 500px;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  justify-content: space-evenly;
+  padding: 2.5em;
+}
+
+.tile-orange {
+  background-color: var(--color-bright-orange);
+}
+
+.tile-green {
+  background-color: var(--color-dark-cyan);
+}
+
+.tile-dark-green {
+  background-color: var(--color-very-dark-cyan);
+}
+
+.title {
+  font-family: var(--font-big-shoulders-display);
+  text-transform: uppercase;
+  font-style: normal;
+  font-size: 2.2em;
+  line-height: normal;
+  margin-top: 0.5em;
+}
+
+.description {
+  color: var(--color-transparent-white);
+  line-height: 25px;
+  margin-top: -1em;
+}
+
+.button {
+  padding: 0.8em 2em;
+  border-radius: 1.5em;
+  border: 2px solid white;
+  background-color: white;
+  font-weight: bold;
+  transition: all 0.2s ease;
+}
+
+.button:hover {
+  background-color: transparent;
+  color: white;
+}
+
+.button-orange {
+  color: var(--color-bright-orange);
+}
+
+.button-green {
+  color: var(--color-dark-cyan);
+}
+
+.button-dark-green {
+  color: var(--color-very-dark-cyan);
+}
+
+@media (max-width: 800px) {
+  .container {
+    height: auto;
+  }
+  .container .tile-wrapper {
+    flex-direction: column;
+  }
 }
